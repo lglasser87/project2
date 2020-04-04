@@ -5,7 +5,7 @@ var session = require("express-session");
 var passport = require("./config/passport");
 
 // Setting up port and requiring models for syncing
-var PORT = process.env.PORT || 4000;
+var PORT = process.env.PORT || 3306;
 var db = require("./models");
 
 // Creating express app and configuring middleware needed for authentication
