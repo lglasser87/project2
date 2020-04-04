@@ -20,6 +20,7 @@
   "homepage": "https://github.com/lglasser87/project2#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "express-session": "^1.17.0"
+    "express-session": "^1.17.0",
+    "passport": "^0.4.1"
   }
 }
