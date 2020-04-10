@@ -5,3 +5,7 @@ $(document).ready(function() {
       $(".member-name").text(data.email);
     });
   });
+
+  //Start 
+  //Character
+  //Options
