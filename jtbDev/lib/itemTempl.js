@@ -1,11 +1,20 @@
-// Class constructor for the main weapon equipped.
-module.exports = class {
-    constructor(name, descr){
-        this.name = name;
-        this.descr = descr;
-    }
+module.exports = function(sequelize, DataTypes) {
+    let Item = sequelize.define("Item", {
+        name: DataTypes.STRING,
+        Description: DataTypes.STRING,
+        toHit: DataTypes.INTEGER,
+        Damage: DataTypes.INTEGER,
+        DamageType: DataTypes.STRING
+    });
 
-    showInfo() {
-        console.log(`${this.name} is ${this.descr}`)
-    }
-}
+    Item.associate = function(models) {
+        // Associating the character with an inventory
+        Item.belongsTo(models.Character, {
+            foreignKey: {
+                allowNull: false
+            }
+        });
+    };
+
+    return Item;
+};

@@ -1,23 +1,16 @@
-module.exports = class Character {
-    
-    constructor(name, hp, ac) {
-        this.name = name;
-        this.hp = hp,
-        this.ac = ac;
-        this.inventory = [];
-    }
+module.exports = function(sequelize, DataTypes) {
+    let Character = sequelize.define("Character", {
+        name: DataTypes.STRING,
+        HP: DataTypes.INTEGER,
+        AC: DataTypes.INTEGER
+    });
 
-    damage(damageAmount){
-        this.hp = this.hp - damageAmount;
-    }
+    Character.associate = function(models) {
+        // Associating the character with an inventory
+        Character.hasMany(models.items, {
+            onDelete: "cascade"
+        });
+    };
 
-    addItem(item){
-        this.inventory.push(item);
-    }
-
-    inspectInventory(){
-        this.inventory.forEach(function(item) {
-            item.showInfo();
-        })
-    }
-}
+    return Character;
+};
