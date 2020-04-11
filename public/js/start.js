@@ -18,6 +18,7 @@ $(document).ready(function() {
 
     $(document).on("click", "button.input", charDecision);
     $(document).on("click", "button.roll", rollDice);
+    //
 
     //get decisions & dice rolls from database?
     getDecisions();

@@ -29,6 +29,13 @@ $(document).ready(function() {
           .then(getCharacters);
     }
 
+    function getCharacters() {
+        $.get("/api/characters", function(data) {
+          characters = data;
+          handleCharacterFormSubmit();
+        });
+      }
+
     //Stats: Stength, Dexterity, Constitution, Intelligence, Wisdom, Charisma. Depends on race chosen.
     //Bio. Depends on race chosen.
     //function if/else, then upsert & post
@@ -135,8 +142,6 @@ $(document).ready(function() {
         };
 
     }
-
-    //getCharacters function? 
 
 
     //Start button, link to start.js  
