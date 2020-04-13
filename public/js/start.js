@@ -27,8 +27,9 @@ $(document).ready(function() {
     //initialize?
 
     function charDecision() {
+        //load prompt (<legend>) & options (<input> and <label>)
         //get character decision from prompt
-        //upload new prompt
+        //upload new prompt & options
     };
 
     function rollDice() {

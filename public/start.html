@@ -10,12 +10,43 @@
   <body>
     <h1>Hello, world!</h1>
 
+    <!--Avatar-->
+    <img> id="char-image"
+    <!--HP-->
+    <div id="hp"></div>
+    <!--MP-->
+    <div id="mp"></div>
+    <!--Dice roll outcome-->
+    <!--Dice roll button-->
+    <!--Prompt window w/ option buttons-->
+    <div class="grid-x grid-padding-x">
+        <fieldset class="large-7 cell">
+          <legend></legend>
+          <input type="radio" name="option" value="A" id="optionA" required><label for="optionA"></label>
+          <input type="radio" name="option" value="B" id="optionB"><label for="optionB"></label>
+          <input type="radio" name="option" value="C" id="optionC"><label for="optionC"></label>
+        </fieldset>
+      </div>
+    <!--Text window w/ submit button-->
+    <div class="input-group">
+        <label>
+            Chat Box
+            <textarea placeholder="Type here!"></textarea>
+        </label>
+        <div class="input-group-button">
+            <input type="submit" class="button" value="Submit">
+        </div>
+    </div>
+
+
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.min.js"></script>
     <script>
       $(document).foundation();
     </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script type="text/javascript" src="js/start.js"></script>
 
   </body>
 </html>

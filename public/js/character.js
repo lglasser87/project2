@@ -2,8 +2,9 @@ $(document).ready(function() {
     //Name
     //Male/ Female?
     //Race: human, elf, dwarf, or elf. Make this a checkbox?
-    var nameInput = $("#character-name");
-    var raceChosen = $("#character-race");
+    var nameInput = $(".character-name");
+    var raceChosen = $(".character-race");
+    var avatar = $("#avatar");
 
     $(document).on("submit", "#character-name-form", handleCharacterFormSubmit);
     $(document).on("click", "#character-race-form", handleCharacterRaceFormSubmit);
@@ -93,8 +94,10 @@ $(document).ready(function() {
                     row.append("<p> Wisdom: " + newHuman.wisdom + " </p>");
                     row.append("<p> Charisma: " + newHuman.charisma + " </p>");
                     row.append("<p> Bio: " + newHuman.bio + " </p>");
+
+                    //upload human avatar img
                 })
-        };
+        }
         else if (raceChosen === "elf") {
             $.post("/api/characters", newElf)
                 .then(function() {
@@ -108,8 +111,10 @@ $(document).ready(function() {
                     row.append("<p> Wisdom: " + newElf.wisdom + " </p>");
                     row.append("<p> Charisma: " + newElf.charisma + " </p>");
                     row.append("<p> Bio: " + newElf.bio + " </p>");
+
+                    //upload elf avatar img
                 })
-        };
+        }
         else if (raceChosen === "dwarf") {
             $.post("/api/characters", newDwarf)
                 .then(function() {
@@ -123,8 +128,10 @@ $(document).ready(function() {
                     row.append("<p> Wisdom: " + newDwarf.wisdom + " </p>");
                     row.append("<p> Charisma: " + newDwarf.charisma + " </p>");
                     row.append("<p> Bio: " + newDwarf.bio + " </p>");
+
+                    //upload dwarf avatar img
                 })
-        };
+        }
         else if (raceChosen === "cyborg") {
             $.post("/api/characters", newCyborg)
                 .then(function() {
@@ -138,6 +145,8 @@ $(document).ready(function() {
                     row.append("<p> Wisdom: " + newCyborg.wisdom + " </p>");
                     row.append("<p> Charisma: " + newCyborg.charisma + " </p>");
                     row.append("<p> Bio: " + newCyborg.bio + " </p>");
+
+                    //upload cyborg avatar img
                 })
         };
 
