@@ -46,7 +46,7 @@
                     <!--Name-->
                     <div id="character-name">Name: </div>
                     <!--Avatar-->
-                    <img src="./img/elf.png" alt="Avatar" id="avatar">
+                    <img src="./img/orig-elf.png" alt="Avatar" id="avatar">
                     <!--HP-->
                     <div id="char-hp">HP: 10</div>
                     <!--AC-->
@@ -62,10 +62,10 @@
                 <!--Middle: prompt window w/ option buttons. Populate w/ Javi's storyline!-->
                 <div class="cell medium-8 medium-cell-block-y middle">
                     <fieldset class="large-7 cell orbitron">
-                    <legend>Prompt</legend>
-                    <input type="radio" name="option" value="A" id="optionA" required><label for="optionA" class="middle">A</label>
-                    <input type="radio" name="option" value="B" id="optionB"><label for="optionB" class="middle">B</label>
-                    <input type="radio" name="option" value="C" id="optionC"><label for="optionC" class="middle">C</label>
+                    <legend id="prompt">Prompt</legend>
+                    <input type="radio" name="option" value="A" class="option" id="optionA" required><label for="optionA" class="middle">A</label>
+                    <input type="radio" name="option" value="B" class="option" id="optionB"><label for="optionB" class="middle">B</label>
+                    <input type="radio" name="option" value="C" class="option" id="optionC"><label for="optionC" class="middle">C</label>
                     </fieldset>
                 </div>
 
@@ -79,9 +79,9 @@
                     <div id="monster-damage">Damage: 1d6</div>
                     <br><br><br>
                     <!--Dice roll outcome from Liz's API!-->
-                    <div id="dice">Dice roll: </div>
+                    <div id="dice-outcome">Dice roll: </div>
                     <!--Dice roll button-->
-                    <input type="image" src="./img/dice.png" name="roll" class="btTxt submit" id="roll">
+                    <input type="image" src="./img/dice.png" name="roll" class="btTxt submit" id="dice-btn">
                 </div>
             </div>
         </div>
@@ -95,6 +95,8 @@
     </script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script type="text/javascript" src="js/start.js"></script>
+      <!--also character.js to pull name (& other info?)-->
+      <script type="text/javascript" src="js/character.js"></script>
       <script type="text/javascript" src="js/foundation/foundation.js"></script>
 
   </body>
