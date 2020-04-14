@@ -4,23 +4,25 @@ $(document).ready(function() {
     var avatar = $("#avatar");
     //Monster Stats
     var monster = $("#monster");
+    //Items
+    var items = $(".item");
     //Text (prompt) window
     var prompt = $("#prompt");
     //Chat (input) box
     // var input = $("#input");
     //Character Hit Points
-    var hp = $("#hp");
+    var hp = $("#char-hp");
     //Character MP
-    var mp = $("#mp");
+    var ac = $("#ac");
     //Dice Roll
     var diceRoll = $("#dice-roll");
     //Dice Button
         //utilize random number to create dice roll function, then call back with on-click event with each attack
     var diceBtn = $("#dice-btn");
 
+    //play music upon page load!!!
     $(document).on("click", "button.input", charDecision);
     $(document).on("click", "button.roll", rollDice);
-    //
 
     //get decisions & dice rolls from database?
     getDecisions();

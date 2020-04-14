@@ -16,3 +16,12 @@ form.login {
     display: none;
   }
 }
+.pixel-font {
+  color: white; 
+  font-family: 'Press Start 2P', cursive;
+}
+
+.orbitron {
+font-family: 'Orbitron', sans-serif;
+}
+

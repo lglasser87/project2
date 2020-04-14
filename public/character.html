@@ -12,66 +12,84 @@
 
     <title>Danguns and Durgens</title>
     <style>
-        .menu-text {
-        color: white; 
-        font-family: 'Press Start 2P', cursive;
+        .button {
+          border-radius: 12px;
         }
-        .menu-choices {
-        font-family: 'Orbitron', sans-serif;
-        }
-    </style>
+      </style>
   </head>
 
   <body>
     <div class="top-bar" id="example-menu">
         <div class="top-bar-left">
           <ul class="dropdown menu" data-dropdown-menu>
-            <li class="menu-text">Danguns and Durgens</li>
-            <li><a href="./options.html" class="menu-choices">Options</a></li>
-            <li><a href="./character.html" class="menu-choices">Character</a></li>
+            <li class="menu-text pixel-font">Danguns and Durgens</li>
+            <li><a href="./character.html" class="orbitron">Character</a></li>
+            <li><a href="./options.html" class="orbitron">Options</a></li>
             <!--logout and redirect to login page?-->
-            <li><a href="./login.html" class="menu-choices">Logout</a></li>
+            <li><a href="./login.html" class="orbitron">Logout</a></li>
           </ul>
         </div>
     </div>
 
-    <div class="grid-container fluid">  
-        <!--Stats box:
-            Strength
-            Dexterity
-            Constitution
-            Intelligence
-            Wisdom
-            Charisma
-        -->
-    
-        <!--Bio-->
-    
-        <!--Start button-->
-    
-        <!--Character name input box and submit button-->
-        <div class="input-group">
-            <span class="input-group-label">Name</span>
-            <input class="input-group-field character-name" type="input">
-            <div class="input-group-button">
-              <input type="submit" class="button" value="Submit">
+    <div class="grid-y medium-grid-frame orbitron"> 
+        <div class="cell medium-auto medium-cell-block-container">
+            <div class="grid-x grid-padding-x">
+                <!--Left side!-->
+                <div class="cell medium-4 medium-cell-block-y">
+                    <!--Start button-->
+                    <div class="cell medium-4">
+                    <a href="./start.html" class="success button hollow large">
+                    Start Adventure!</a>
+                    </div> 
+
+                    <!--Character name input box and submit button-->
+                    <div class="cell medium-4 input-group">
+                    <span class="input-group-label">Name me!</span>
+                    <input class="input-group-field character-name" type="input">
+                        <div class="input-group-button">
+                            <input type="submit" class="button" value="Submit">
+                        </div>
+                    </div>
+
+                    <!--Stats box:-->
+                    <div id="cell medium-4 stats">
+                    <!--HP-->
+                    <div id="char-hp">HP: </div>
+                    <!--AC-->
+                    <div id="ac">AC: </div>
+                    <!-- Strength
+                    Dexterity
+                    Constitution
+                    Intelligence
+                    Wisdom
+                    Charisma
+                    -->
+                    </div>
+                                        
+                    <!--Bio-->
+                    <div id="cell medium-4 bio">
+                        <h>Bio:</h>
+                        <p></p>
+                    </div>
+
+                    <!--Different races (Phase 2)
+                    <fieldset class="large-7 cell">
+                    <legend>Choose Your Race</legend>
+                    <input type="radio" name="race" value="Human" class="character-race" id="raceHuman" required><label for="raceHuman">Human</label>
+                    <input type="radio" name="race" value="Elf" class="character-race" id="raceElf"><label for="raceElf">Elf</label>
+                    <input type="radio" name="race" value="Dwarf" class="character-race" id="raceDwarf"><label for="raceDwarf">Dwarf</label>
+                    <input type="radio" name="race" value="Cyborg" class="character-race" id="raceCyborg"><label for="raceCyborg">Cyborg</label>
+                    </fieldset>
+                    -->
+                </div>
+
+                <!--Right side: large img of avatar!-->
+                <div class="cell medium-8 medium-cell-block-y">
+                    <img src="./img/elf.png" alt="Avatar" id="avatar">
+                </div>
             </div>
         </div>
-    
-        <!--Character race-->
-        <!-- <div class="grid-x grid-padding-x">
-            <fieldset class="large-7 cell">
-              <legend>Choose Your Race</legend>
-              <input type="radio" name="race" value="Human" class="character-race" id="raceHuman" required><label for="raceHuman">Human</label>
-              <input type="radio" name="race" value="Elf" class="character-race" id="raceElf"><label for="raceElf">Elf</label>
-              <input type="radio" name="race" value="Dwarf" class="character-race" id="raceDwarf"><label for="raceDwarf">Dwarf</label>
-              <input type="radio" name="race" value="Cyborg" class="character-race" id="raceCyborg"><label for="raceCyborg">Cyborg</label>
-            </fieldset>
-          </div> -->
-          
-        <!--Character avatar-->
-        <img src="./img/elf.png" alt="Avatar" id="avatar">
-        </div>
+    </div>
 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>

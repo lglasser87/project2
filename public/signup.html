@@ -12,25 +12,17 @@
 
     <title>Danguns and Durgens</title>
     <style>
-      .menu-text {
-      color: white; 
-      font-family: 'Press Start 2P', cursive;
+      .button {
+        border-radius: 12px;
       }
-      .menu-choices {
-      font-family: 'Orbitron', sans-serif;
-      }
-  </style>
+    </style>
   </head>
 
 <body>
   <div class="top-bar" id="example-menu">
     <div class="top-bar-left">
       <ul class="dropdown menu" data-dropdown-menu>
-        <li class="menu-text">Danguns and Durgens</li>
-        <li><a href="./options.html" class="menu-choices">Options</a></li>
-        <li><a href="./character.html" class="menu-choices">Character</a></li>
-        <!--logout and redirect to login page?-->
-        <li><a href="./login.html" class="menu-choices">Logout</a></li>
+        <li class="menu-text pixel-font">Danguns and Durgens</li>
       </ul>
     </div>
   </div>
@@ -45,8 +37,8 @@
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
-          <h2>Get ready for adventure!</h2>
-          <form class="signup">
+          <h2 class="orbitron">Ready to start your adventure?</h2>
+          <form class="signup orbitron">
             <div class="form-group">
               <label for="exampleInputEmail1">Email address</label>
               <input type="email" class="form-control" id="email-input" placeholder="Email">
@@ -62,7 +54,7 @@
             <input type="submit" class="button" value="Sign up">
           </form>
           <br />
-          <p>Or log in <a href="./login.html">here</a></p>
+          <p class="orbitron">Or log in <a href="./login.html">here</a></p>
         </div>
       </div>
     </div>
