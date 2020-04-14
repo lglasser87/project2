@@ -1,10 +1,11 @@
 module.exports = function(sequelize, DataTypes) {
     let Item = sequelize.define("Item", {
         name: DataTypes.STRING,
+        itemType: DataTypes.STRING,
         Description: DataTypes.STRING,
-        toHit: DataTypes.INTEGER,
-        Damage: DataTypes.INTEGER,
-        DamageType: DataTypes.STRING
+        // toHit: DataTypes.INTEGER,
+        Damage: DataTypes.INTEGER
+        // DamageType: DataTypes.STRING
     });
 
     Item.associate = function(models) {

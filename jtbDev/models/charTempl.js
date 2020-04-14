@@ -7,7 +7,7 @@ module.exports = function(sequelize, DataTypes) {
 
     Character.associate = function(models) {
         // Associating the character with an inventory
-        Character.hasMany(models.items, {
+        Character.hasMany(models.Items, {
             onDelete: "cascade"
         });
     };

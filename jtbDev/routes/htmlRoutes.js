@@ -8,12 +8,12 @@ module.exports = function(app) {
     app.get("/", function(req, res) {
         res.sendFile(path.join(__dirname, "login"));
     });
-    // Once the user logs in, they are brought to their character menu
-    app.get("/char-menu", function(req, res) {
+    // game will start here.
+    app.get("/game", function(req, res) {
         res.sendFile(path.join(__dirname, "charMenu"));
     });
     // Once a character is chosen they are ready to start the game!
-    app.get("/text-Adventure", function(req, res) {
-        res.sendFile(path.join(__dirname, "game"));
-    });
+    // app.get("/text-Adventure", function(req, res) {
+        // res.sendFile(path.join(__dirname, "game"));
+    // });
 }
