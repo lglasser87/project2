@@ -1,0 +1,125 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="stylesheets/foundation.css" />
+  <link href="stylesheets/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheets/foundation.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Press+Start+2P&display=swap"
+    rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <title>Danguns and Durgens</title>
+  <style>
+    .middle {
+      background: url('./img/background.jpeg');
+      background-position: center;
+      height: 100%;
+      color: white;
+      text-align: center;
+      margin: auto;
+      padding: 20%;
+    }
+  </style>
+</head>
+
+<body>
+  <!--Navbar-->
+  <div class="top-bar" id="example-menu">
+    <div class="top-bar-left">
+      <ul class="dropdown menu" data-dropdown-menu>
+        <li class="menu-text pixel-font">Danguns and Durgens</li>
+        <li><a href="./character.html" class="orbitron">Character</a></li>
+        <li><a href="./options.html" class="orbitron">Options</a></li>
+        <!--logout and redirect to login page?-->
+        <li><a href="./login.html" class="orbitron">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="grid-y medium-grid-frame orbitron">
+    <div class="cell medium-auto medium-cell-block-container">
+      <div class="grid-x grid-padding-x">
+        <!--Left side!-->
+        <div class="cell medium-2 medium-cell-block-y stats orbitron">
+          <!--Name-->
+          <!--Avatar-->
+          <img src="./img/orig-elf.png" alt="Avatar" id="avatar">
+          <div id="playerStats">
+            <!-- Name -->
+            <p>Name:<span id="playName"></span> </p>
+            <!--HP-->
+            <p>HP:<span id="playHp"></span></p>
+            <!--AC-->
+            <p>AC:<span id="playAc">16</span></p>
+            <!--To Hit-->
+            <p>To Hit:<span id="playToHit">5</span></p>
+            <!--Damage-->
+            <p>Damage:<span id="playDamage">1d8</span></p>
+          </div>
+          
+          <br><br><br>
+          <!--Item(s)-->
+          <div class="item">Item(s): Twinkle & Icingdeath</div>
+          <img src="./img/item.png" alt="item" id="item">
+        </div>
+
+        <!--Middle: prompt window w/ option buttons. Populate w/ Javi's storyline!-->
+        <div class="cell medium-8 medium-cell-block-y middle">
+          <fieldset class="large-7 cell orbitron">
+            <legend id="prompt">Prompt</legend>
+            <!-- <input type="radio" name="option" value="A" class="option" id="optionA" required><label for="optionA"
+              class="middle">A</label> -->
+           <!-- <input type="radio" name="option" value="B" class="option" id="optionB"><label for="optionB"
+              class="middle">B</label> -->
+             <!-- <input type="radio" name="option" value="C" class="option" id="optionC"><label for="optionC"
+              class="middle">C</label> -->
+              <div id="option-buttons" class="btn-grid">
+                <button class="btn" id="inspect">Inspect</button>
+                <button class="btn" id="interact" disabled>Interact</button>
+                <button class="btn" id="attack" disabled>Attack</button>
+                <button class="btn" id="restart">Restart</button>
+                <p id="game-message"></p>
+          </fieldset>
+        </div>
+
+        <!--Right side: monster stats & dice-->
+        <div class="cell medium-2 medium-cell-block-y orbitron">
+          <img src="./img/monster.png" alt="Zombie" id="zombie">
+          <div id="monster">Monster: Zombie</div>
+          <!--HP-->
+          <p>HP:<span id="monHp"></span></p>
+          <!--AC-->
+          <p>AC:<span id="monAc">16</span></p>
+          <!--To Hit-->
+          <p>To Hit:<span id="monToHit">5</span></p>
+          <!--Damage-->
+          <p>Damage:<span id="monDamage">1d8</span></p>
+          <br><br><br>
+          <!--Dice roll outcome from Liz's API!-->
+          <div id="dice-outcome">Dice roll: </div>
+          <!--Dice roll button-->
+          <input type="image" src="./img/dice.png" name="roll" class="btTxt submit" id="dice-btn">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script> -->
+
+  <script type="text/javascript" src="js/foundation/foundation.js"></script>
+  <script type="text/javascript" src="js/start.js"></script>
+  <!--also character.js to pull name (& other info?)-->
+  <!-- <script type="text/javascript" src="js/character.js"></script> -->
+
+</body>
+
+</html>

@@ -2,3 +2,31 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
+.no-js .top-bar {
+  display: none;
+}
+
+@media screen and (min-width: 40em) {
+  .no-js .top-bar {
+    display: block;
+  }
+
+  .no-js .title-bar {
+    display: none;
+  }
+}
+
+body, html {
+  height: 100%;
+}
+
+.pixel-font {
+  color: white; 
+  font-family: 'Press Start 2P', cursive;
+}
+
+.orbitron {
+font-family: 'Orbitron', sans-serif;
+}
+
