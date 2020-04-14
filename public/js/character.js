@@ -1,27 +1,27 @@
 $(document).ready(function() {
-    //Name
+    //Character Name
+    var nameInput = $(".character-name").val().trim();
     //Male/ Female?
-    //Race: human, elf, dwarf, or elf. Make this a checkbox?
-    var nameInput = $(".character-name");
-    var raceChosen = $(".character-race");
-    var avatar = $("#avatar");
+    //Avatar (id in <div> for inserting different avatars)
+        // var avatar = $("#avatar");
+    //Races: human, elf, dwarf, or elf. (make this a checkbox??
+        // var raceChosen = $(".character-race");
 
-    $(document).on("submit", "#character-name-form", handleCharacterFormSubmit);
-    $(document).on("click", "#character-race-form", handleCharacterRaceFormSubmit);
+    $(document).on("submit", ".character-name", handleCharacterNameSubmit);
+    //On-click event for choosing a different race
+    // $(document).on("click", "#character-race-form", handleCharacterRaceFormSubmit);
 
     getCharacters();
 
-    function handleCharacterFormSubmit(event) {
+    function handleCharacterNameSubmit(event) {
         event.preventDefault();
         // Don't do anything if the name field hasn't been filled out
-        if (!nameInput.val().trim().trim()) {
+        if (!nameInput) {
           return;
         }
         // Calling the upsertName function and passing in the value of the name input
         upsertName({
           name: nameInput
-            .val()
-            .trim()
         });
     }
 
@@ -33,125 +33,125 @@ $(document).ready(function() {
     function getCharacters() {
         $.get("/api/characters", function(data) {
           characters = data;
-          handleCharacterFormSubmit();
+          handleCharacterNameSubmit();
         });
       }
 
-    //Stats: Stength, Dexterity, Constitution, Intelligence, Wisdom, Charisma. Depends on race chosen.
-    //Bio. Depends on race chosen.
-    //function if/else, then upsert & post
-    function handleCharacterRaceFormSubmit(event) {
-        event.preventDefault();
+    //FUNCTION FOR CHOOSING A DIFFERENT RACE
+    // function handleCharacterRaceFormSubmit(event) {
+    //     event.preventDefault();
 
-        //making objects so it's easier to pull integers for rolls
-        var newHuman = {
-            strength: 5,
-            dexterity: 3,
-            constitution: 3,
-            intelligence: 4,
-            wisdom: 4,
-            charisma: 10,
-            bio: "",
-        };
-        var newElf = {
-            strength: 5,
-            dexterity: 3,
-            constitution: 3,
-            intelligence: 4,
-            wisdom: 4,
-            charisma: 10,
-            bio: "",
-        };
-        var newDwarf = {
-            strength: 5,
-            dexterity: 3,
-            constitution: 3,
-            intelligence: 4,
-            wisdom: 4,
-            charisma: 10,
-            bio: "",
-        };
-        var newCyborg = {
-            strength: 5,
-            dexterity: 3,
-            constitution: 3,
-            intelligence: 4,
-            wisdom: 4,
-            charisma: 10,
-            bio: "",
-        };
+        //Stats: Stength, Dexterity, Constitution, Intelligence, Wisdom, Charisma. Depends on race chosen.
+        //Bio. Depends on race chosen.
+        //Img. Depends on race chosen.
+        //Function if/else, then upsert & post
 
-        if (raceChosen === "human") {
-            $.post("/api/characters", newHuman)
-                .then(function() {
-                    var row = $("<div>");
-                    row.addClass("race");
+    //     //making objects so it's easier to pull integers for rolls
+    //     var newHuman = {
+    //         strength: 5,
+    //         dexterity: 3,
+    //         constitution: 3,
+    //         intelligence: 4,
+    //         wisdom: 4,
+    //         charisma: 10,
+    //         bio: "",
+    //     };
+    //     var newElf = {
+    //         strength: 5,
+    //         dexterity: 3,
+    //         constitution: 3,
+    //         intelligence: 4,
+    //         wisdom: 4,
+    //         charisma: 10,
+    //         bio: "",
+    //     };
+    //     var newDwarf = {
+    //         strength: 5,
+    //         dexterity: 3,
+    //         constitution: 3,
+    //         intelligence: 4,
+    //         wisdom: 4,
+    //         charisma: 10,
+    //         bio: "",
+    //     };
+    //     var newCyborg = {
+    //         strength: 5,
+    //         dexterity: 3,
+    //         constitution: 3,
+    //         intelligence: 4,
+    //         wisdom: 4,
+    //         charisma: 10,
+    //         bio: "",
+    //     };
 
-                    row.append("<p> Strength: " + newHuman.strength + " </p>");
-                    row.append("<p> Dexterity: " + newHuman.dexterity + " </p>");
-                    row.append("<p> Constitution: " + newHuman.constitution + " </p>");
-                    row.append("<p> Intelligence: " + newHuman.intelligence + " </p>");
-                    row.append("<p> Wisdom: " + newHuman.wisdom + " </p>");
-                    row.append("<p> Charisma: " + newHuman.charisma + " </p>");
-                    row.append("<p> Bio: " + newHuman.bio + " </p>");
+    //     if (raceChosen === "human") {
+    //         $.post("/api/characters", newHuman)
+    //             .then(function() {
+    //                 var row = $("<div>");
+    //                 row.addClass("race");
 
-                    //upload human avatar img
-                })
-        }
-        else if (raceChosen === "elf") {
-            $.post("/api/characters", newElf)
-                .then(function() {
-                    var row = $("<div>");
-                    row.addClass("race");
+    //                 row.append("<p> Strength: " + newHuman.strength + " </p>");
+    //                 row.append("<p> Dexterity: " + newHuman.dexterity + " </p>");
+    //                 row.append("<p> Constitution: " + newHuman.constitution + " </p>");
+    //                 row.append("<p> Intelligence: " + newHuman.intelligence + " </p>");
+    //                 row.append("<p> Wisdom: " + newHuman.wisdom + " </p>");
+    //                 row.append("<p> Charisma: " + newHuman.charisma + " </p>");
+    //                 row.append("<p> Bio: " + newHuman.bio + " </p>");
 
-                    row.append("<p> Strength: " + newElf.strength + " </p>");
-                    row.append("<p> Dexterity: " + newElf.dexterity + " </p>");
-                    row.append("<p> Constitution: " + newElf.constitution + " </p>");
-                    row.append("<p> Intelligence: " + newHuman.intelligence + " </p>");
-                    row.append("<p> Wisdom: " + newElf.wisdom + " </p>");
-                    row.append("<p> Charisma: " + newElf.charisma + " </p>");
-                    row.append("<p> Bio: " + newElf.bio + " </p>");
+    //                 //upload human avatar img
+    //             })
+    //     }
+    //     else if (raceChosen === "elf") {
+    //         $.post("/api/characters", newElf)
+    //             .then(function() {
+    //                 var row = $("<div>");
+    //                 row.addClass("race");
 
-                    //upload elf avatar img
-                })
-        }
-        else if (raceChosen === "dwarf") {
-            $.post("/api/characters", newDwarf)
-                .then(function() {
-                    var row = $("<div>");
-                    row.addClass("race");
+    //                 row.append("<p> Strength: " + newElf.strength + " </p>");
+    //                 row.append("<p> Dexterity: " + newElf.dexterity + " </p>");
+    //                 row.append("<p> Constitution: " + newElf.constitution + " </p>");
+    //                 row.append("<p> Intelligence: " + newHuman.intelligence + " </p>");
+    //                 row.append("<p> Wisdom: " + newElf.wisdom + " </p>");
+    //                 row.append("<p> Charisma: " + newElf.charisma + " </p>");
+    //                 row.append("<p> Bio: " + newElf.bio + " </p>");
 
-                    row.append("<p> Strength: " + newDwarf.strength + " </p>");
-                    row.append("<p> Dexterity: " + newDwarf.dexterity + " </p>");
-                    row.append("<p> Constitution: " + newDwarf.constitution + " </p>");
-                    row.append("<p> Intelligence: " + newDwarf.intelligence + " </p>");
-                    row.append("<p> Wisdom: " + newDwarf.wisdom + " </p>");
-                    row.append("<p> Charisma: " + newDwarf.charisma + " </p>");
-                    row.append("<p> Bio: " + newDwarf.bio + " </p>");
+    //                 //upload elf avatar img
+    //             })
+    //     }
+    //     else if (raceChosen === "dwarf") {
+    //         $.post("/api/characters", newDwarf)
+    //             .then(function() {
+    //                 var row = $("<div>");
+    //                 row.addClass("race");
 
-                    //upload dwarf avatar img
-                })
-        }
-        else if (raceChosen === "cyborg") {
-            $.post("/api/characters", newCyborg)
-                .then(function() {
-                    var row = $("<div>");
-                    row.addClass("race");
+    //                 row.append("<p> Strength: " + newDwarf.strength + " </p>");
+    //                 row.append("<p> Dexterity: " + newDwarf.dexterity + " </p>");
+    //                 row.append("<p> Constitution: " + newDwarf.constitution + " </p>");
+    //                 row.append("<p> Intelligence: " + newDwarf.intelligence + " </p>");
+    //                 row.append("<p> Wisdom: " + newDwarf.wisdom + " </p>");
+    //                 row.append("<p> Charisma: " + newDwarf.charisma + " </p>");
+    //                 row.append("<p> Bio: " + newDwarf.bio + " </p>");
 
-                    row.append("<p> Strength: " + newCyborg.strength + " </p>");
-                    row.append("<p> Dexterity: " + newCyborg.dexterity + " </p>");
-                    row.append("<p> Constitution: " + newCyborg.constitution + " </p>");
-                    row.append("<p> Intelligence: " + newCyborg.intelligence + " </p>");
-                    row.append("<p> Wisdom: " + newCyborg.wisdom + " </p>");
-                    row.append("<p> Charisma: " + newCyborg.charisma + " </p>");
-                    row.append("<p> Bio: " + newCyborg.bio + " </p>");
+    //                 //upload dwarf avatar img
+    //             })
+    //     }
+    //     else if (raceChosen === "cyborg") {
+    //         $.post("/api/characters", newCyborg)
+    //             .then(function() {
+    //                 var row = $("<div>");
+    //                 row.addClass("race");
 
-                    //upload cyborg avatar img
-                })
-        };
+    //                 row.append("<p> Strength: " + newCyborg.strength + " </p>");
+    //                 row.append("<p> Dexterity: " + newCyborg.dexterity + " </p>");
+    //                 row.append("<p> Constitution: " + newCyborg.constitution + " </p>");
+    //                 row.append("<p> Intelligence: " + newCyborg.intelligence + " </p>");
+    //                 row.append("<p> Wisdom: " + newCyborg.wisdom + " </p>");
+    //                 row.append("<p> Charisma: " + newCyborg.charisma + " </p>");
+    //                 row.append("<p> Bio: " + newCyborg.bio + " </p>");
 
-    }
+    //                 //upload cyborg avatar img
+    //             })
+    //     };
 
-
-    //Start button, link to start.js  
+    // }
 })
