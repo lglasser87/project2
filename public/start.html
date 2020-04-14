@@ -12,11 +12,11 @@
 
     <title>Danguns and Durgens</title>
     <style>
-        .content {
-          /*not centering :(
-          max-width: 500px;
-          margin: auto; */
+        .middle {
           background: url('./img/background.jpeg');
+          height: 100%;
+          color: white;
+          text-align: center;
         }
       </style>
   </head>
@@ -39,41 +39,46 @@
         <div class="cell medium-auto medium-cell-block-container">
             <div class="grid-x grid-padding-x">
                 <!--Left side!-->
-                <div class="cell medium-4 medium-cell-block-y stats orbitron">
+                <div class="cell medium-2 medium-cell-block-y stats orbitron">
                     <!--Name-->
                     <div id="character-name">Name: </div>
                     <!--Avatar-->
                     <img src="./img/elf.png" alt="Avatar" id="avatar">
                     <!--HP-->
-                    <div id="char-hp">HP: </div>
+                    <div id="char-hp">HP: 10</div>
                     <!--AC-->
-                    <div id="ac">AC: </div>
+                    <div id="ac">AC: 14</div>
                     <!--Damage-->                              
-                    <div id="char-damage">Damage:</div>
+                    <div id="char-damage">Damage: 1d5 + 2</div>
+                    <br><br><br>
+                    <!--Item(s)-->
+                    <div class="item">Item(s): Death's Scythe</div>
+                    <img src="./img/item.png" alt="item" id="item">
+                </div>
+
+                <!--Middle: prompt window w/ option buttons. Populate w/ Javi's storyline!-->
+                <div class="cell medium-8 medium-cell-block-y middle">
+                    <fieldset class="large-7 cell orbitron">
+                    <legend>Prompt</legend>
+                    <input type="radio" name="option" value="A" id="optionA" required><label for="optionA" class="middle">A</label>
+                    <input type="radio" name="option" value="B" id="optionB"><label for="optionB" class="middle">B</label>
+                    <input type="radio" name="option" value="C" id="optionC"><label for="optionC" class="middle">C</label>
+                    </fieldset>
+                </div>
+
+                <!--Right side: monster stats & dice-->
+                <div class="cell medium-2 medium-cell-block-y orbitron">
+                    <div id="monster">Monster: Zombie</div>
+                    <img src="./img/monster.png" alt="Zombie" id="zombie">
+                    <!--HP-->
+                    <div id="monster-hp">HP: 10</div>
+                    <!--Damage-->
+                    <div id="monster-damage">Damage: 1d6</div>
+                    <br><br><br>
                     <!--Dice roll outcome from Liz's API!-->
                     <div id="dice">Dice roll: </div>
                     <!--Dice roll button-->
                     <input type="image" src="./img/dice.png" name="roll" class="btTxt submit" id="roll">
-                </div>
-
-                <!--Middle: prompt window w/ option buttons. Populate w/ Javi's storyline!-->
-                <div class="cell medium-4 medium-cell-block-y prompt">
-                    <fieldset class="large-7 cell orbitron">
-                    <legend>Prompt</legend>
-                    <input type="radio" name="option" value="A" id="optionA" required><label for="optionA">A</label>
-                    <input type="radio" name="option" value="B" id="optionB"><label for="optionB">B</label>
-                    <input type="radio" name="option" value="C" id="optionC"><label for="optionC">C</label>
-                    </fieldset>
-                </div>
-
-                <!--Right side: item(s) & monster stats-->
-                <div class="orbitron">
-                    <div class="item">Item(s)</div>
-                    <div id="monster">Monster</div>
-                    <!--HP-->
-                    <div id="monster-hp">HP: </div>
-                    <!--Damage-->
-                    <div id="monster-damage">Damage: </div>
                 </div>
             </div>
         </div>

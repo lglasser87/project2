@@ -13,43 +13,54 @@
   <title>Danguns and Durgens</title>
   <style>
     .content {
-      /*not centering :(
-      max-width: 500px;
-      margin: auto; */
       background: url('./img/background.jpeg');
+      height: 100%;
+      background-position: center;
+      text-align: center;
+      /*background-repeat: no-repeat;
+      background-size: cover;*/
     }
     .pixel-font {
-      color: white; 
+      color: white;
+    }
+    .button-group {
+      margin: auto;
+      width: 50%;
+      padding: 7%;
     }
     .button {
       border-radius: 12px;
+    }
+    img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
     }
   </style>
 </head>
 
 <body>
-  <div class="grid-container fluid content">
-    <!--Giant Danguns and Durgens Logo-->
-    <div>
+  <div class="grid-y medium-grid-frame content">
+    <div class="cell shrink header medium-cell-block-container">
       <h1 class="title pixel-font">Danguns and Durgens</h1>
-      <img src="./img/dragon.png" alt="Durgen">
-    </div>
+      <div class="grid-x grid-padding-x">
+        <div class="cell medium-cell-block-y">
+          <img src="./img/dragon.png" alt="Durgen">
 
-    <!--Welcome player-->
-    <!-- <div>
-      <h2 style="color: white; font-family: 'Press Start 2P', cursive;">Welcome!</h2>
-    </div> -->
-
-    <!--Game options-->
-    <div class="button-group orbitron">
-      <a href="./start.html" class="success button hollow large">
-        Start Adventure</a>
-      <a href="./character.html" class="warning button hollow large">
-        Edit Character</a>
-      <a href="./options.html" class="secondary button hollow large">
-        Options</a>
-      <a href="./login.html" class="alert button hollow large">
-        Logout</a>
+          <!--Game options-->
+          <div class="button-group orbitron">
+            <a href="./start.html" class="success button hollow large">
+              Start Adventure</a>
+            <a href="./character.html" class="warning button hollow large">
+              Edit Character</a>
+            <a href="./options.html" class="secondary button hollow large">
+              Options</a>
+            <a href="./login.html" class="alert button hollow large">
+              Logout</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 

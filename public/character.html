@@ -12,8 +12,21 @@
 
     <title>Danguns and Durgens</title>
     <style>
+        .content {
+            margin: auto;
+            width: 80%;
+            padding: 10px;
+        }
         .button {
-          border-radius: 12px;
+            margin-top: 10px;
+            border-radius: 12px;
+        }
+        #avatar {
+            height: 100%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 70%;
         }
       </style>
   </head>
@@ -33,17 +46,17 @@
 
     <div class="grid-y medium-grid-frame orbitron"> 
         <div class="cell medium-auto medium-cell-block-container">
-            <div class="grid-x grid-padding-x">
+            <div class="grid-x grid-padding-x content">
                 <!--Left side!-->
-                <div class="cell medium-4 medium-cell-block-y">
+                <div class="cell medium-6 medium-cell-block-y">
                     <!--Start button-->
-                    <div class="cell medium-4">
+                    <div class="cell medium-6">
                     <a href="./start.html" class="success button hollow large">
                     Start Adventure!</a>
                     </div> 
 
                     <!--Character name input box and submit button-->
-                    <div class="cell medium-4 input-group">
+                    <div class="cell medium-6 input-group">
                     <span class="input-group-label">Name me!</span>
                     <input class="input-group-field character-name" type="input">
                         <div class="input-group-button">
@@ -52,24 +65,24 @@
                     </div>
 
                     <!--Stats box:-->
-                    <div id="cell medium-4 stats">
-                    <!--HP-->
-                    <div id="char-hp">HP: </div>
-                    <!--AC-->
-                    <div id="ac">AC: </div>
-                    <!-- Strength
-                    Dexterity
-                    Constitution
-                    Intelligence
-                    Wisdom
-                    Charisma
-                    -->
+                    <div id="cell medium-6 stats">
+                        <!--HP-->
+                        <div id="char-hp">HP: 10</div>
+                        <!--AC-->
+                        <div id="ac">AC: 14</div>
+                        <!-- Strength
+                        Dexterity
+                        Constitution
+                        Intelligence
+                        Wisdom
+                        Charisma
+                        -->
                     </div>
-                                        
+                          
+                    <br><br>
                     <!--Bio-->
-                    <div id="cell medium-4 bio">
-                        <h>Bio:</h>
-                        <p></p>
+                    <div id="cell medium-6 bio">
+                        <p>Bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
                     </div>
 
                     <!--Different races (Phase 2)
@@ -84,7 +97,7 @@
                 </div>
 
                 <!--Right side: large img of avatar!-->
-                <div class="cell medium-8 medium-cell-block-y">
+                <div class="cell medium-6 medium-cell-block-y">
                     <img src="./img/elf.png" alt="Avatar" id="avatar">
                 </div>
             </div>

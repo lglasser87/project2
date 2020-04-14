@@ -16,6 +16,11 @@ form.login {
     display: none;
   }
 }
+
+body, html {
+  height: 100%;
+}
+
 .pixel-font {
   color: white; 
   font-family: 'Press Start 2P', cursive;
