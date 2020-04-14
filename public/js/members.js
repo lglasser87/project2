@@ -6,6 +6,7 @@ $(document).ready(function() {
     });
   });
 
-  //Start 
+  //Once logged in, user gets to start game, choose character, or update settings (options)
+  //Start
   //Character
   //Options

@@ -5,6 +5,7 @@ $(document).ready(function() {
     var passwordInput = $("input#password-input");
   
     // When the signup button is clicked, we validate the email and password are not blank
+    //BUTTON WASN'T WORKING SO CHANGED TO <INPUT>, change to on click?
     signUpForm.on("submit", function(event) {
       event.preventDefault();
       var userData = {

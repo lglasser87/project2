@@ -3,8 +3,11 @@ $(document).ready(function() {
     var loginForm = $("form.login");
     var emailInput = $("input#email-input");
     var passwordInput = $("input#password-input");
+
+    //initialize & save?
   
     // When the form is submitted, we validate there's an email and password entered
+    //BUTTON WASN'T WORKING SO CHANGED TO <INPUT>, change to on click?
     loginForm.on("submit", function(event) {
       event.preventDefault();
       var userData = {

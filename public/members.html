@@ -1,34 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
 
 <head>
-  <title>Passport Authentication</title>
   <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
   <link href="stylesheets/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="stylesheets/foundation.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <title>Danguns and Durgens</title>
+  <style>
+    .content {
+      background: url('./img/sword.jpeg');
+      height: 100%;
+      background-position: center;
+      text-align: center;
+      margin: auto;
+      padding: 5%;
+      /*background-repeat: no-repeat;
+      background-size: cover;*/
+    }
+    .pixel-font {
+      color: white;
+    }
+    .button-group {
+      margin: auto;
+      width: 50%;
+      padding: 5%;
+    }
+    .button {
+      border-radius: 12px;
+    }
+    img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    }
+  </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/logout">
-        Logout
-      </a>
-    </div>
-  </div>
-</nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>Welcome <span class="member-name"></span></h2>
+  <div class="grid-y medium-grid-frame content">
+    <div class="cell shrink header medium-cell-block-container">
+      <h1 class="title pixel-font">Danguns and Durgens</h1>
+      <div class="grid-x grid-padding-x">
+        <div class="cell medium-cell-block-y">
+          <img src="./img/dragon.png" alt="Durgen">
+
+          <!--Game options-->
+          <div class="button-group orbitron">
+            <a href="/start" class="success button hollow large">
+              Start Adventure</a>
+            <a href="/characters" class="warning button hollow large">
+              Edit Character</a>
+            <a href="/options" class="secondary button hollow large">
+              Options</a>
+            <!-- <a href="/login" class="alert button hollow large"> -->
+              <!-- Logout</a> -->
+          </div>
+        </div>
       </div>
     </div>
   </div>
-
+<!-- 
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/vendor/what-input.js"></script>
+  <script src="js/vendor/foundation.min.js"></script>
+  <script>
+    $(document).foundation();
+  </script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/members.js"></script>
+  <script type="text/javascript" src="js/foundation/foundation.js"></script>
 
 </body>
 
