@@ -1,11 +1,13 @@
 //Start Game!!!
 $(document).ready(function() {
     //Character image
-    var charImage = $("#char-image");
+    var avatar = $("#avatar");
+    //Monster Stats
+    var monster = $("#monster");
     //Text (prompt) window
     var prompt = $("#prompt");
     //Chat (input) box
-    var input = $("#input");
+    // var input = $("#input");
     //Character Hit Points
     var hp = $("#hp");
     //Character MP
@@ -30,6 +32,9 @@ $(document).ready(function() {
         //load prompt (<legend>) & options (<input> and <label>)
         //get character decision from prompt
         //upload new prompt & options
+        //display new hp, if decision affects it
+        //display new mp, if decision affects it
+        //update monster
     };
 
     function rollDice() {

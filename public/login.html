@@ -1,44 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheets/foundation.css" />
+    <link href="stylesheets/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/foundation.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Press+Start+2P&display=swap" rel="stylesheet">
 
-<head>
-  <title>Passport Authentication</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-  <link href="stylesheets/style.css" rel="stylesheet">
-</head>
+    <title>Danguns and Durgens</title>
+    <style>
+      .menu-text {
+      color: white; 
+      font-family: 'Press Start 2P', cursive;
+      }
+      .menu-choices {
+      font-family: 'Orbitron', sans-serif;
+      }
+  </style>
+  </head>
 
 <body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-      </div>
+  <div class="top-bar" id="example-menu">
+    <div class="top-bar-left">
+      <ul class="dropdown menu" data-dropdown-menu>
+        <li class="menu-text">Danguns and Durgens</li>
+        <li><a href="./options.html" class="menu-choices">Options</a></li>
+        <li><a href="./character.html" class="menu-choices">Character</a></li>
+        <!--logout and redirect to login page?-->
+        <li><a href="./login.html" class="menu-choices">Logout</a></li>
+      </ul>
     </div>
-  </nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>Login Form</h2>
-        <form class="login">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="email-input" placeholder="Email">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="password-input" placeholder="Password">
-          </div>
-          <button type="submit" class="btn btn-default">Login</button>
-        </form>
-        <br />
-        <p>Or sign up <a href="/">here</a></p>
+  </div>
+
+  <div class="grid-container fluid">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <h2>MOAR ADVENTURE</h2>
+          <form class="login">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="email-input" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="password-input" placeholder="Password">
+            </div>
+            <input type="submit" class="button" value="Log in">
+          </form>
+          <br />
+          <p>Or sign up <a href="./signup.html">here</a></p>
+        </div>
       </div>
     </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/login.js"></script>
+  <script type="text/javascript" src="js/foundation/foundation.js"></script>
 
 </body>
 

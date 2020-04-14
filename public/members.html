@@ -2,51 +2,58 @@
 <html class="no-js" lang="en">
 
 <head>
-  <title>Passport Authentication</title>
   <meta charset="UTF-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="stylesheets/style.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/foundation.css" />
+  <link rel="stylesheet" href="stylesheets/foundation.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <title>Danguns and Durgens</title>
+  <style>
+    .content {
+      /*not centering :(
+      max-width: 500px;
+      margin: auto; */
+      background: url('./img/background.jpeg');
+    }
+    .title {
+      color: white; 
+      font-family: 'Press Start 2P', cursive;
+    }
+    .button-group {
+      font-family: 'Orbitron', sans-serif;
+    }
+    .button {
+      border-radius: 12px;
+    }
+  </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/logout">
-        Logout
-      </a>
-    </div>
-  </div>
-</nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>Welcome <span class="member-name"></span></h2>
-      </div>
+  <div class="grid-container fluid content">
+    <!--Giant Danguns and Durgens Logo-->
+    <div>
+      <h1 class="title">Danguns and Durgens</h1>
+      <img src="./img/dragon.png" alt="Durgen">
     </div>
 
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <a href="./start.html">
-          <button class="start-btn">Start</button>
-        </a>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <a href="./character.html">
-          <button class="char-btn">Character</button>
-        </a>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <a href="./options.html">
-          <button class="options-btn">Options</button>
-        </a>
-      </div>
+    <!--Welcome player-->
+    <!-- <div>
+      <h2 style="color: white; font-family: 'Press Start 2P', cursive;">Welcome!</h2>
+    </div> -->
+
+    <!--Game options-->
+    <div class="button-group">
+      <a href="./start.html" class="success button hollow large">
+        Start Adventure</a>
+      <a href="./character.html" class="warning button hollow large">
+        Edit Character</a>
+      <a href="./options.html" class="secondary button hollow large">
+        Options</a>
+      <a href="./login.html" class="alert button hollow large">
+        Logout</a>
     </div>
   </div>
 
@@ -58,6 +65,7 @@
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/members.js"></script>
+  <script type="text/javascript" src="js/foundation/foundation.js"></script>
 
 </body>
 
