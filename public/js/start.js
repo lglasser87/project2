@@ -31,9 +31,7 @@ $(document).ready(function () {
   //Dice Button
   // var diceBtn = $("#dice-btn")
   //utilize random number to create dice roll function, then call back with on-click event with each attack
-  //Music! is file path correct?
-  // var audio = new Audio("mp3/dnd-theme.mp3");
-  //Chat (input) box (Phase 2-3)
+    // Chat (input) box (Phase 2-3)
   // var input = $("#input");
 
   const textElement = document.getElementById("prompt");
@@ -44,10 +42,16 @@ $(document).ready(function () {
   let playHp = document.getElementById("playHp");
   let monHp = document.getElementById("monHp");
   let playName = document.getElementById("playName");
+  var audio = document.getElementById("audio");
+  var playBtn = document.getElementById("play");
+  var pauseBtn = document.getElementById("pause");
+
+  playBtn.addEventListener("click", function(){ audio.play(); }); 
+  pauseBtn.addEventListener("click", function(){ audio.pause(); });
 
 
   function startGame() {
-    showTextNode("room")
+    showTextNode("room");
     playName.innerText = player.name;
     playHp.innerText = player.hp;
     monHp.innerText = opponent.hp;
@@ -62,8 +66,6 @@ $(document).ready(function () {
     textElement.innerText = textNode.text;
 
   }
-
-
 
   function selectOption(option) {
     const nextTextNodeId = option;
@@ -180,7 +182,6 @@ $(document).ready(function () {
     text: "Your strength fails you and your vision fades as you crumple to the ground. The sound of a sinister laughter rings in your ears. It is the last sound you hear as your final breath escapes your lips",
     
   },
-  
 ]
 
 startGame();
