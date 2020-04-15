@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
   //Character Name
   var nameInput = $(".character-name").val().trim();
   //Male/ Female?
@@ -176,3 +177,4 @@ $(document).ready(function () {
 
   // }
 })
+
