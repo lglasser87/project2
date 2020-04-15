@@ -48,7 +48,7 @@ $(document).ready(function () {
   function getCharacters() {
     $.get("/api/characters", function (data) {
       characters = data;
-      handleCharacterNameSubmit();
+      // handleCharacterNameSubmit();
     });
   }
 
