@@ -40,7 +40,11 @@ $(document).ready(function () {
     // var diceBtn = $("#dice-btn")
     //utilize random number to create dice roll function, then call back with on-click event with each attack
     //Music! is file path correct?
+<<<<<<< Updated upstream
     // var audio = new Audio("mp3/dnd-theme.mp3");
+=======
+    var audio = new Audio("mp3/dnd-theme.mp3");
+>>>>>>> Stashed changes
     //Chat (input) box (Phase 2-3)
     // var input = $("#input");
   
