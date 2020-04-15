@@ -77,7 +77,6 @@
         <div class="cell medium-8 medium-cell-block-y middle">
           <fieldset class="large-7 cell orbitron">
             <legend id="prompt">Prompt</legend>
-
             <!-- <input type="radio" name="option" value="A" class="option" id="optionA" required><label for="optionA"
               class="middle">A</label> -->
            <!-- <input type="radio" name="option" value="B" class="option" id="optionB"><label for="optionB"
@@ -90,8 +89,15 @@
                 <button class="btn button primary hollow" id="attack" disabled>Attack</button>
                 <button class="btn button primary hollow" id="restart">Restart</button>
                 <p id="game-message"></p>
-
           </fieldset>
+
+          <!--Music!-->
+          <audio id="audio">
+            <source src="./dnd-theme.mp3" type="audio/mpeg">
+          </audio>
+          <!-- custom play and pause buttons -->
+          <button class="btn button primary hollow" id="play">play</button>
+          <button class="btn button primary hollow" id="pause">pause</button>
         </div>
 
         <!--Right side: monster stats & dice-->
@@ -130,8 +136,6 @@
 
   <!--also character.js to pull name (& other info?)-->
   <!-- <script type="text/javascript" src="js/character.js"></script> -->
-
-
 </body>
 
 </html>

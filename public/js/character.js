@@ -28,7 +28,7 @@ $(document).ready(function () {
       return;
     };
 
-    alert("Yay, my name is " + nameInput.val() + " !");
+    alert("Yay, my name is " + nameInput.val() + "!");
 
     // Calling the upsertName function and passing in the value of the name input
     upsertCharacter({
