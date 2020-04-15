@@ -1,16 +1,17 @@
 $(document).ready(function () {
-
+  //Submit Button
+  var nameSubmit = $("#name-submit");
   //Character Name
-  var nameInput = $(".character-name").val().trim();
+  var nameInput = $(".character-name");
   //Male/ Female?
   //Avatar (id in <div> for inserting different avatars)
   // var avatar = $("#avatar");
   //Races: human, elf, dwarf, or elf. (make this a checkbox??
   // var raceChosen = $(".character-race");
 
-  $("#nameSubmit").on("click", function(event) {
-    // event.preventDefault();
-
+  nameSubmit.on("click", function(event) {
+    event.preventDefault();
+    
     handleCharacterNameSubmit();
   });
   //On-click event for choosing a different race
@@ -22,10 +23,12 @@ $(document).ready(function () {
 
   function handleCharacterNameSubmit() {
     // Don't do anything if the name field hasn't been filled out
-    if (!nameInput) {
+    if (!nameInput.val().trim()) {
       return;
-    }
+    };
+
     alert("Character name applied.");
+    
     // Calling the upsertName function and passing in the value of the name input
     upsertCharacter({
       name: nameInput,
