@@ -3,18 +3,7 @@ var express = require("express");
 // var session = require("express-session");
 // Requiring passport as we've configured it
 // var passport = require("./config/passport");
-var mysql = require('mysql');
-var connection = mysql.createConnection(process.env.JAWSDB_URL);
 
-connection.connect();
-
-connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
-  if (err) throw err;
-
-  console.log('The solution is: ', rows[0].solution);
-});
-
-connection.end();
 // Setting up port and requiring models for syncing
 var app = express()
 var PORT = process.env.PORT || 4000;
