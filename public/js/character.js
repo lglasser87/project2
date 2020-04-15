@@ -24,11 +24,12 @@ $(document).ready(function () {
   function handleCharacterNameSubmit() {
     // Don't do anything if the name field hasn't been filled out
     if (!nameInput.val().trim()) {
+      alert("Why won't you name me? :(");
       return;
     };
 
-    alert("Character name applied.");
-    
+    alert("Yay, my name is " + nameInput.val() + " !");
+
     // Calling the upsertName function and passing in the value of the name input
     upsertCharacter({
       name: nameInput,

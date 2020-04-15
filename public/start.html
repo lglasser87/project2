@@ -22,8 +22,13 @@
       text-align: center;
       margin: auto;
       padding: 20%;
+    };
+    .button {
+      margin-top: 10px;
+      border-radius: 12px;
+      color: white;
+      border-color: white;
     }
-    
   </style>
 </head>
 
@@ -80,10 +85,10 @@
              <!-- <input type="radio" name="option" value="C" class="option" id="optionC"><label for="optionC"
               class="middle">C</label> -->
               <div id="option-buttons" class="btn-grid">
-                <button class="btn" id="inspect">Inspect</button>
-                <button class="btn" id="interact" disabled>Interact</button>
-                <button class="btn" id="attack" disabled>Attack</button>
-                <button class="btn" id="restart">Restart</button>
+                <button class="btn button primary hollow" id="inspect">Inspect</button>
+                <button class="btn button primary hollow" id="interact" disabled>Interact</button>
+                <button class="btn button primary hollow" id="attack" disabled>Attack</button>
+                <button class="btn button primary hollow" id="restart">Restart</button>
                 <p id="game-message"></p>
 
           </fieldset>
