@@ -6,7 +6,7 @@ var express = require("express");
 
 // Setting up port and requiring models for syncing
 var app = express()
-var PORT = process.env.PORT || 4000;
+var PORT = process.env.JAWSDB_URL;
 
 // Requiring models for syncing
 var db = require("./models");
