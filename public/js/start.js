@@ -41,15 +41,16 @@ $(document).ready(function () {
   const interactBtn = document.getElementById("interact");
   const attackBtn = document.getElementById("attack");
   const restartBtn = document.getElementById("restart");
-  let playHp = $("#playHp");
-  let monHp = $("#monHp");
-  let playName = $("#playName");
+  let playHp = document.getElementById("playHp");
+  let monHp = document.getElementById("monHp");
+  let playName = document.getElementById("playName");
 
 
   function startGame() {
     showTextNode("room")
     playName.innerText = player.name;
-
+    playHp.innerText = player.hp;
+    monHp.innerText = opponent.hp;
   }
 
   function restart() {
@@ -106,6 +107,7 @@ $(document).ready(function () {
       printOpponentHp(opponent);
       if (fightOver(opponent)) {
         showTextNode("victory");
+        attackBtn.disabled = true;
       }
     } else {
       gameMessage.InnerText = "Your weapon deflects harmlessly off its tattered armor."
@@ -121,6 +123,7 @@ $(document).ready(function () {
         printPlayerHp(player);
         if (fightOver(player)) {
           showTextNode("defeat");
+          attackBtn.disabled = true;
         }
       } else {
         gameMessage.innerText = "The creature's claws meet nothing but air as you dodge."
@@ -131,7 +134,7 @@ $(document).ready(function () {
   }
 
   function printPlayerHp(unit) {
-    playHp.innerText = unit.hp;
+    playHp.innerText =  unit.hp;
   }
 
   function printOpponentHp(unit) {
